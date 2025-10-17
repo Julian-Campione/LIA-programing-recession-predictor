@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -5,7 +6,7 @@ df = pd.read_csv("yield-curve-rates-1990-2024.csv")
 print(df.head())
 print(df.columns)
 
-yr10 = df['10 Yr'].values
+yr10 = np.array(df['10 Yr'])
 
 # plot 
 

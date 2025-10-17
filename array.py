@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -11,11 +12,17 @@ dates = df["Date"]
 yr1 = df["1 Yr"]
 yr10 = df["10 Yr"]
 
+# arrays
+
+dates_array = np.array(dates)
+yr1_array = np.array(yr1)
+yr10_array = np.array(yr10)
+
 #plot set up
 
 plt.figure(figsize=(10,5))
-plt.plot(dates, yr1, 'r-', label="Year 1") #red line for year 1
-plt.plot(dates, yr10, 'b--', label="Year 10") #blue dash for year 10
+plt.plot(dates_array, yr1_array, 'r-', label="Year 1") #red line for year 1
+plt.plot(dates_array, yr10_array, 'b--', label="Year 10") #blue dash for year 10
 
 #labels
 plt.title("US Treasuries Over Time")
