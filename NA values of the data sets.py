@@ -10,7 +10,7 @@ print(a.isnull().sum())
 b = pd.read_csv("C:/Users/julia/OneDrive/Documents/yield-curve-rates-1990-2024.csv")
 print(b.isnull().sum())
 
-#c is the data set of expansion and 
+#c is the data set of expansion and recession
 c = pd.read_csv("C:/Users/julia/OneDrive/Documents/USREC.csv")
 print(a.isnull().sum())
 
@@ -26,3 +26,4 @@ print(c.info())
 #there is also 1 missing value for all of them. 
 #This is not going to end up mattering because there is so much data
 #when using /working with the yeilds dataset just add b.dropna to the end
+
