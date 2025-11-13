@@ -3,20 +3,19 @@ import pandas as pd
 
 # b) d)
 #a is the unemployment data set
-a = pd.read_csv("C:/Users/julia/OneDrive/Documents/US-unemployment-rate.csv")
+a = pd.read_csv("US-unemployment-rate.csv")
 print(a.isnull().sum())
 a_ = pd.to_datetime(a["Date"])
 
 #b is the % yeild/bond maturities 
-b = pd.read_csv("C:/Users/julia/OneDrive/Documents/yield-curve-rates-1990-2024.csv")
+b = pd.read_csv("yield-curve-rates-1990-2024.csv")
 print(b.isnull().sum())
 b_ = pd.to_datetime(b["Date"])
 
 #c is the data set of expansion and recession
-c = pd.read_csv("C:/Users/julia/OneDrive/Documents/USREC.csv")
+c = pd.read_csv("USREC.csv")
 print(a.isnull().sum())
-c_ = pd.to_datetime(c["Date"])
-
+c_ = pd.to_datetime(c["observation_date"])
 
 #a) 
 print(a.info())
@@ -38,3 +37,4 @@ print(c.info())
 ###print(b["6 Mo"].duplicated()) 
 #same with droping duplicates
 ###print(b.drop_duplicates(subset=["6 Mo",]))
+
