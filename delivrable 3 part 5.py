@@ -8,8 +8,8 @@ Created on Wed Nov 12 15:09:05 2025
 import pandas as pd
 
 
-z = pd.read_csv("C:/Users/julia/OneDrive/Documents/US-unemployment-recession.csv")
-y = pd.read_csv("C:/Users/julia/OneDrive/Documents/yield-curve-rates-and-recession.csv")
+z = pd.read_csv("US-unemployment-recession.csv")
+y = pd.read_csv("yield-curve-rates-and-recession.csv")
 
 
 T_yr = pd.crosstab(z["Year"], z["Recession"])
@@ -53,8 +53,8 @@ print(T_yye)
 import pandas as pd
 
 
-z = pd.read_csv("C:/Users/julia/OneDrive/Documents/US-unemployment-recession.csv")
-y = pd.read_csv("C:/Users/julia/OneDrive/Documents/yield-curve-rates-and-recession.csv")
+z = pd.read_csv("US-unemployment-recession.csv")
+y = pd.read_csv("yield-curve-rates-and-recession.csv")
 
 
 tyr = pd.crosstab(z["Year"], z["Recession"], normalize=True)
@@ -97,8 +97,8 @@ print(T_yye)
 import pandas as pd
 
 
-z = pd.read_csv("C:/Users/julia/OneDrive/Documents/US-unemployment-recession.csv")
-y = pd.read_csv("C:/Users/julia/OneDrive/Documents/yield-curve-rates-and-recession.csv")
+z = pd.read_csv("US-unemployment-recession.csv")
+y = pd.read_csv("yield-curve-rates-and-recession.csv")
 
 
 z["Unemployment_level"] = pd.qcut(z["Unemployment_Rate"], 
@@ -116,6 +116,7 @@ z["Year"] = date.dt.year #col
 T_3variable = pd.crosstab(index=[z["Year"]], 
                           columns=[z["Unemployment_level"], z["Recession"]])
 print(T_3variable)
+
 
 
 
