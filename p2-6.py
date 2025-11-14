@@ -264,9 +264,8 @@ print("------------------------")
 
 # example two: recession by year category (early/mid/late)
 
-data["Period"] = pd.cut(data["Year"], bins =[1947, 1975, 2000, 2025], labels = ["Early", "Middle", "Late"])
+data["Period"] = pd.qcut(data["Year"],q = 3, labels = ["Early", "Middle", "Late"])
 ct2 = pd.crosstab(data["Recession"], data["Period"])
-print("Crosstab : Recession by Period:")
 print(ct2)
 print("------------------------")
 
