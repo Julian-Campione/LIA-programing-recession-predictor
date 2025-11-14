@@ -142,7 +142,7 @@ plt.show()
         
 # Numerical variable = Unemployment_Rate
 # histogram with recession conditioning 
-sns.histplot(data=data, x="Unemployment_Rate", hue="Recession", bins=20)
+sns.histplot(data=data, x="Unemployment_Rate", hue="Recession", element="step", bins=20)
 plt.title("Unemployment Rate Distribution Varying by Recession")
 plt.xlabel("Unemployment Rate (%)")
 plt.ylabel("Count")
@@ -150,7 +150,7 @@ plt.show()
 
 # Numerical variable = Year 
 # histogram with recession conditioning
-sns.histplot(data=data, x="Year", hue="Recession", bins=20)
+sns.histplot(data=data, x="Year", hue="Recession", element="step", bins=20)
 plt.title("Year Distribution Varying by Recession")
 plt.xlabel("Year")
 plt.ylabel("Count")
