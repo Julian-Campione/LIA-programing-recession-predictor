@@ -71,9 +71,6 @@ for col in categorical_cols:
 
 # Defining each column
 
-numerical_cols = ["Year", "Unemployment_Rate"]
-categorical_cols = ["Recession" ] #recession counts as categorical because 0/1 defines it as yes or no
-datetime_cols = ["Date"]
 for col in datetime_cols:
     data[col] = pd.to_datetime(data[col]) #conversion to proper type
 # Numerical Variables
@@ -481,7 +478,7 @@ plt.show()
     
  # Box plot
 
-data["Decade"] = (data["Year"]//10) * 10 #this is to lower the amount of unique hues, increasing the readability by lowering the clutter
+#we use decades here. This is to lower the amount of unique hues, increasing the readability by lowering the clutter
 
 p_9 = sns.boxplot(
     data = data,
