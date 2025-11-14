@@ -269,7 +269,7 @@ ct2 = pd.crosstab(data["Recession"], data["Period"])
 print(ct2)
 print("------------------------")
 
-# example three: decade by period
+# example three: unemployment level by recession
 
 data["Unemployment_level"] = pd.qcut(data["Unemployment_Rate"], q=4, labels=["Very Low","Low","High","Very High"])
 ct3 = pd.crosstab(data["Unemployment_level"], data["Recession"])
