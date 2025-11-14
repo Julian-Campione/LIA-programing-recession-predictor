@@ -1,3 +1,5 @@
+# authors : "Julian Campione, Jacob Mockler, Nikolas Spiropoulos"
+
 # Initial set up
 
 import pandas as pd
