@@ -272,9 +272,16 @@ print("------------------------")
 
 # example three: decade by period
 
-ct3 = pd.crosstab(data["Decade"], data["Period"])
-print("Crosstab : Decade by Period:")
+data["Unemployment_level"] = pd.qcut(data["Unemployment_Rate"], q=4, labels=["Very Low","Low","High","Very High"])
+ct3 = pd.crosstab(data["Unemployment_level"], data["Recession"])
 print(ct3)
+print("------------------------")
+
+# four: decade by period
+
+ct4 = pd.crosstab(data["Decade"], data["Period"])
+print("Crosstab : Decade by Period:")
+print(ct4)
 print("------------------------")
 
     # b) Crosstabs with proportions / percentages
